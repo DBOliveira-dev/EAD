@@ -1,0 +1,21 @@
+public class Main {
+    public static void main(String[] args) {
+       
+        Veiculo carro = new Carro("VOLKSWAGEN POLO");
+        Veiculo moto = new Moto("Honda CBR");
+
+       
+        carro.acelerar();
+        moto.acelerar();
+    }
+}
+
+abstract class Veiculo {
+    protected String modelo;
+    
+    public Veiculo(String modelo) {
+        this.modelo = modelo;
+    }
+    
+    public abstract void acelerar();
+}

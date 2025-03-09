@@ -1,0 +1,23 @@
+public class Main {
+    public static void main(String[] args) {
+        
+        double jurosSimples = Financeira.calcularJurosSimples(1000, 0.05, 2);
+        System.out.println("Juros Simples: " + jurosSimples);
+
+        double valorConvertido = Financeira.converterMoeda(100, 5.2); // Conversão para outra moeda
+        System.out.println("Valor convertido: " + valorConvertido);
+    }
+}
+
+public class Financeira {
+    
+    // Método estático para calcular os juros simples
+    public static double calcularJurosSimples(double capital, double taxa, int tempo) {
+        return capital * taxa * tempo;
+    }
+
+    // Método estático para converter valores de uma moeda para outra
+    public static double converterMoeda(double valor, double taxaCambio) {
+        return valor * taxaCambio;
+    }
+}
